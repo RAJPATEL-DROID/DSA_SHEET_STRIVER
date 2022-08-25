@@ -1,0 +1,13 @@
+// https://practice.geeksforgeeks.org/problems/reverse-bits3556/1
+// Given a 32 bit number X, reverse its binary form and print the answer in decimal.
+
+LEARNING = > BITSET AND STOLL, ATOI
+
+class Solution {
+  public:
+    long long reversedBits(long long X) {
+        string str = bitset<32>(X).to_string();
+        reverse(str.begin(),str.end());
+        return stoll(str, 0, 2);
+    }
+};
